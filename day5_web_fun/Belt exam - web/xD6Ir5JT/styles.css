@@ -1,0 +1,282 @@
+/* Styles for days */
+/* Handcoded by Dan Chu with LOVE */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+     text-decoration: none;
+}
+
+.wrapper{
+    width: 960px;
+    padding: 30px 35px;
+}
+
+.nav{
+
+}
+
+.menu{
+    width: 100%;
+    border-radius: 5px;
+    margin: 0 auto 20px;
+    border: 1px solid #d0d0d0;
+    background: #565656;
+    background: linear-gradient(#f6f6f6, #d5d5d5);
+}
+
+.menu #icon1{
+    padding: 0;
+}
+.menu #icon1 img{
+    height: 60px;
+    border-radius: 5px 0 0 5px;
+}
+
+.menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li{
+    display: inline-block;
+    border-right: 1px solid #d0d0d0;
+    vertical-align: middle;
+    padding: 21px 25px;
+}
+.menu a{
+    color: #333;
+    font-weight: bold;
+}
+
+/* Search */
+
+.menu form{
+    display: inline-block;
+	margin:0 0 0 140px;
+    vertical-align: middle;
+}
+
+.searchbar img{
+    border-radius: 0 11px 10px 0;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu input{
+    display: inline-block;
+    background: white;
+    border: 1px solid #d0d0d0;
+    vertical-align: middle;
+}
+.search { 
+	padding:5px 15px 5px 5px;
+}
+
+.rounded { 
+	border-radius:15px 0 0 15px; 
+	-moz-border-radius:15px 0 0 15px;; 
+	-webkit-border-radius:15px 0 0 15px;; 
+}
+
+/* Hero */
+
+.hero img{
+    width: 100%;
+}
+
+.heronav{
+    padding: 10px 0;
+    background: #505050;
+    color: #606060;
+    border-radius: 0 0 5px 5px;
+}
+
+.heronav a{
+     color: #7da5bf;
+     padding: 20px;
+}
+
+.heronav #white{
+    color: white;
+}
+
+/* Content */
+
+.content {
+    margin: 20px 0;
+    width: 100%;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+}
+
+.calltoaction{
+    padding: 30px 20px 30px 20px;
+    margin: 0 auto;
+}
+
+.calltoaction h2{
+    font-size: 2.25em;
+    color: #c5c5c5;
+    font-weight: 300;
+    display: inline-block;
+    padding: 10px 30px 10px 10px;
+    vertical-align: middle;
+    border-right: 2px solid #d0d0d0;
+}
+
+.calltoaction .button {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 100%;
+    color: #fff;
+    background: #6299bc;
+    background: linear-gradient(#6299bc,#43708f);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 12px 25px 12px 30px;
+    margin: 10px 10px 10px 30px;
+    vertical-align: middle;
+}
+
+/* Box */
+.box{
+    padding: 40px 15px;
+    background: #f2f2f2;
+    background: linear-gradient(#fff, #f2f2f2);
+    border-top: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+}
+.smbox{
+    width: 204px;
+    height: 287px;
+    padding: 0 14px 0 15px;
+    border-right: 1px solid #d0d0d0;
+    display: inline-block;
+    margin: 0 0 0 -5px;
+    vertical-align: top;
+
+}
+
+#noborderright{
+   border-right: 0;
+}
+
+.smbox h3{
+    font-size: 1.13em;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.smboxicon {
+    display: inline-block;
+    height: 26px; 
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.smbox > p{
+    margin: 20px 0 0 0;
+    font-size: 12px;
+}
+
+.smboxdisplay{
+    margin: 10px 0;
+    width: 100%;
+    vertical-align: bottom;
+    display: inline-block
+}
+.smbox .boxbutton{
+    display: block;
+    width: 164px;
+    font-family: inherit;
+    color: #fff;
+    background: linear-gradient(#62b3f0, #5c99cb);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Had to hardfix those -- ran out of time */
+#buttonfix1{
+    margin-top: 21px;
+}
+#buttonfix2{
+    margin-top: 14px;
+}
+#buttonfix3{
+    margin-top: 25px;
+}
+
+/* Small place holder for Content */
+.fcontent{
+    width: 100%;
+    background: #f2f2f2;
+    height: 50px;
+    border-radius: 0 0 5px 5px;
+}
+
+/* SiteMap */
+.sitemap{
+    font-size: 12px;
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+.sitemap a{
+    color: #444444;
+}
+
+.sitemap ul{
+    margin: 0 auto;
+    list-style:none;
+}
+
+.sitemap > ul > li {
+    width: 137px;
+    padding: 0 10px;
+    vertical-align: top;
+    display: inline-block;
+    list-style: none;
+}
+
+.sitemap > ul > li > ul {
+    margin: 15px 0 0 0;
+}
+.sitemap > ul > li > ul > li {
+    margin: 10px 0 0 0;
+}
+
+.sitemapheader{
+    font-weight:bold;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #c5c5c5;
+    display: block;
+}
+
+/* Footer */
+
+.footer{
+    border-top: 1px solid #d0d0d0;
+    padding-top: 20px;
+}
+
+.footer p{
+    font-size: 12px;
+    display: inline;
+}
+
+.footer a{
+    text-decoration: underline;
+    color: #5ca5dc;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Weather APP</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $.get("http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=190568a61fdc6cffdf0c88f249e6dfda", function(response){
+                    // $('body').html(response);
+                    console.log(response)
+                    var temp = Math.fllor(1.8*())
+                    $("body").append("<h1>Location:"+response.name+"</h1>")
+                })
+                $("button").click(function(){
+                    var city = $()
+                })
+            })
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

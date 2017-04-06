@@ -1,0 +1,183 @@
+/*Css YO*/
+
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float:right;
+}
+
+.warpper{
+    width: 970px;
+
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+    background: #f2f2f2;
+    background: -moz-linear-gradient(top, #f2f2f2 0%, #fefefe 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #fefefe));
+    background: -webkit-linear-gradient(top, #f2f2f2 0%, #fefefe 100%);
+    background: -o-linear-gradient(top, #f2f2f2 0%, #fefefe 100%);
+    background: -ms-linear-gradient(top, #f2f2f2 0%, #fefefe 100%);
+    background: linear-gradient(to bottom, #f2f2f2 0%, #fefefe 100%);
+}
+
+.header h1{
+    margin: 10px 20px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    display: inline-block;
+
+}
+.header h2{
+    margin: 10px 20px 10px 330px;
+    display: inline-block;
+}
+
+.body{
+    padding: 30px;
+    width:910px;
+    background: #6f5964;
+    background: -moz-radial-gradient(center, ellipse cover, #6f5964 0%, #1c0c10 96%, #1c0c10 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #6f5964), color-stop(96%, #1c0c10), color-stop(100%, #1c0c10));
+    background: -webkit-radial-gradient(center, ellipse cover, #6f5964 0%, #1c0c10 96%, #1c0c10 100%);
+    background: -o-radial-gradient(center, ellipse cover, #6f5964 0%, #1c0c10 96%, #1c0c10 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #6f5964 0%, #1c0c10 96%, #1c0c10 100%);
+    background: radial-gradient(ellipse at center, #6f5964 0%, #1c0c10 96%, #1c0c10 100%);
+}
+
+.imgBo{
+    height: 300px;
+    border: 3px solid #888;
+}
+
+.column2{
+    margin: 0 0 20px 0;
+    width: 50%;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.about{
+    background-color: white;
+    width: 100%;
+    height: 306px;
+}
+
+.about h2{
+    color: white;
+}
+
+.about p{
+    padding: 10px;
+}
+
+.about a{
+    padding: 10px;
+    display: block;
+    color: inherit;
+}
+
+.column3{
+   
+}
+
+.portfolio{
+    background-color: white;
+    width: 280px;
+    margin: 20px 10px;
+
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.portfolio h2{
+    color: white;
+}
+.portfolio h3{
+    color: white;
+    font-size: 1.13em;
+}
+.portfolio img{
+    width: 100%;
+}
+
+.icons img{
+    width: 28px;
+    margin: 15px 10px 5px;
+
+}
+
+.portfolio button{
+    background-color:#407d61;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: block;
+    color: white;
+
+}
+
+.footer{
+    width: 100%;
+    height: 80px;
+    background: #fefefe;
+    background: -moz-linear-gradient(top, #fefefe 0%, #fefefe 0%, #f2f2f2 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #fefefe), color-stop(0%, #fefefe), color-stop(100%, #f2f2f2));
+    background: -webkit-linear-gradient(top, #fefefe 0%, #fefefe 0%, #f2f2f2 100%);
+    background: -o-linear-gradient(top, #fefefe 0%, #fefefe 0%, #f2f2f2 100%);
+    background: -ms-linear-gradient(top, #fefefe 0%, #fefefe 0%, #f2f2f2 100%);
+    background: linear-gradient(to bottom, #fefefe 0%, #fefefe 0%, #f2f2f2 100%);
+}
+
+.footer p{
+    padding: 10px 0;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.footer img{
+    width:16px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 5px 0 0;    
+
+}
+.footer a{
+    font-style: italic;
+    color: #000;
+}
+
+.label{
+    padding: 10px;
+    
+
+background: rgba(199,199,199,1);
+background: -moz-linear-gradient(top, rgba(199,199,199,1) 0%, rgba(135,134,147,1) 50%, rgba(199,199,199,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(199,199,199,1)), color-stop(50%, rgba(135,134,147,1)), color-stop(100%, rgba(199,199,199,1)));
+background: -webkit-linear-gradient(top, rgba(199,199,199,1) 0%, rgba(135,134,147,1) 50%, rgba(199,199,199,1) 100%);
+background: -o-linear-gradient(top, rgba(199,199,199,1) 0%, rgba(135,134,147,1) 50%, rgba(199,199,199,1) 100%);
+background: -ms-linear-gradient(top, rgba(199,199,199,1) 0%, rgba(135,134,147,1) 50%, rgba(199,199,199,1) 100%);
+background: linear-gradient(to bottom, rgba(199,199,199,1) 0%, rgba(135,134,147,1) 50%, rgba(199,199,199,1) 100%);
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
