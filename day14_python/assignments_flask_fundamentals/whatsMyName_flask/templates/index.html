@@ -7,8 +7,15 @@
     <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
   </head>
   <body>
-    <h1> Welcome to Dan's landing page template</h1>
+    <h1> Welcome to Dan's what's my name fun</h1>
     <!-- linking an image -->
     <img src="{{ url_for('static', filename='img/imageHolder.png') }}">
+
+    <!-- Form to be reused -->
+    <form action = "/process" method = "post">
+      Name:<input type = 'text' name = 'name'>
+      <input type = 'submit' value = 'Submit'>
+    </form>
+
   </body>
 </html>

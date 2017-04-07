@@ -10,10 +10,8 @@ def index():
 def ninjas():
   return render_template("ninjas.html")
 
-@app.route("/dojos/<new")
-def dojos(new):
+@app.route("/dojos/new")
+def new():
   return render_template("dojos.html")
 
-@app.route("/users", )
-
-app.run()
+app.run(debug=True)
