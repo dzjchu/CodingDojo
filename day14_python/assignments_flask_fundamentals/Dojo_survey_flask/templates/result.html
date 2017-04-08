@@ -7,15 +7,10 @@
     <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
   </head>
   <body>
-    <h1> Welcome to Dan's what's my name fun</h1>
-    <!-- linking an image -->
-    <img src="{{ url_for('static', filename='img/imageHolder.png') }}">
-
-    <!-- Form to be reused -->
-    <form action = "" method = "post">
-      Name:<input type = 'text' name = 'name'>
-      <input type = 'submit' value = 'Submit'>
-    </form>
-
+    Name: {{ name }}<br>
+    Dojo Location: {{ location }}<br>
+    Favorite Language: {{ language }}<br>
+    Comment: {{ comment }}<br>
+    <a href='/'><button>Go back</button></a>
   </body>
 </html>
