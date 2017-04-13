@@ -103,8 +103,8 @@ def login():
       return redirect('/')
 
 
-@app.route('/success')
-def success():
+@app.route('/wall')
+def wall():
   if 'user_id' in session:
     return render_template('wall.html')
   else:
