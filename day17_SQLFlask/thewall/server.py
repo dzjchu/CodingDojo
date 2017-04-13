@@ -60,7 +60,7 @@ def register():
     else:
       print ' passed vlidations'
       #hash password
-      encrpted_password = md5.new(password).hexdigest()
+      encrypted_password = md5.new(password).hexdigest()
       #create an user
       query = 'INSERT into users (first_name, last_name, email, password, created_at, updated_at) VALUES(:first_name, :last_name, :email. :hwpassword, NOW(), NOW())'
       data = {
