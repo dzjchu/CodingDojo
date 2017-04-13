@@ -5,7 +5,7 @@ from mysqlconnection import MySQLConnector
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 
 app = Flask(__name__)
-mysql = MySQLConnector(app, 'login_reg')
+mysql = MySQLConnector(app, 'thewall_db')
 app.secrt_key = 'this is secret'
 
 @app.route('/')
@@ -52,16 +52,10 @@ def register():
     print errors
     # did we pass validations 
 
-    #if true
-      #store user info in session
-      #redirct to success page
-    #else False
-      #send the messages to client
-      #redirect to index
     if errors:
       for error in errors:
          flash (error)
-      return redrict('/')
+      return redirect('/')
     #if false
     else:
       print ' passed vlidations'
