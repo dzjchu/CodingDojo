@@ -6,7 +6,7 @@ EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 
 app = Flask(__name__)
 mysql = MySQLConnector(app, 'thewall_db')
-app.secrt_key = 'this is secret'
+app.secret_key = 'this is secret'
 
 @app.route('/')
 def index():
@@ -29,21 +29,21 @@ def register():
      errors.append('First name is too short!')
     if len(lname) < 2:
      errors.append('Last name is too short!')
-    if not fname.isaplha():
-      errors.append('First name must be characters!')
-    if not lname.isaplha():
-      errors.append('Last name must be characters!')
+    # if not fname.isaplha():
+    #   errors.append('First name must be characters!')
+    # if not lname.isaplha():
+    #   errors.append('Last name must be characters!')
     if not len(email):
       errors.append('email is required!')
-    elif not EMAIL_REGEX.match(email):
-      errors.append('email is invalid!')
-    query = 'SELECT * FROM users WHERE email = :email'
-    data = {
-      'email': email
-    }
-    email = mysql.query_db(query, data)
-    if email:
-      errors.append('email must be unique!')
+    # if not EMAIL_REGEX.match(email):
+    #   errors.append('email is invalid!')
+    # # query = 'SELECT * FROM users WHERE email = :email'
+    # # data = {
+    # #   'email': email
+    # # }
+    # # email = mysql.query_db(query, data)
+    # if email:
+    #   errors.append('email must be unique!')
     if len(password) < 8:
       errors.append('password must be 8 characters long!')
     if not password == password_confirmation:
@@ -62,7 +62,7 @@ def register():
       #hash password
       encrypted_password = md5.new(password).hexdigest()
       #create an user
-      query = 'INSERT into users (first_name, last_name, email, password, created_at, updated_at) VALUES(:first_name, :last_name, :email. :hwpassword, NOW(), NOW())'
+      query = 'INSERT INTO users (first_name, last_name, email, hwpassword, created_at, updated_at) VALUES(:first_name, :last_name, :email, :hwpassword, NOW(), NOW())'
       data = {
         'first_name':fname,
         'last_name':lname,
@@ -74,7 +74,7 @@ def register():
       # store user info in seesion
       session['user_id'] = user_id
       #redirect to success page
-      return redirect()
+      return redirect('/success')
 
 @app.route('/login', methods=['POST'])
 def login():
