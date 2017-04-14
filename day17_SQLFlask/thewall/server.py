@@ -74,7 +74,7 @@ def register():
       # store user info in seesion
       session['user_id'] = user_id
       #redirect to success page
-      return redirect('/success')
+      return redirect('/wall')
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -94,7 +94,7 @@ def login():
       #store user info in seesion
       session['user_id'] = user[0]['id']
       #redirect to success page
-      return redirect('/success')
+      return redirect('/wall')
     #else false
     else:
       #send error to client
@@ -103,10 +103,39 @@ def login():
       return redirect('/')
 
 
+@app.route('/message', methods = ['POST'])
+def message():
+  message = request.form['message']
+  user_id = session['user_id']
+  query = 'INSERT INTO messages (message, created_at, updated_at, user_id) VALUES(:message, NOW(), NOW(), :user_id)'
+  data = {
+    'message':message,
+    'user_id':user_id
+  }
+  # sends info to database
+  mysql.query_db(query, data)
+  return redirect('/wall')
+
+@app.route('/message/<id>', methods = ['POST'])
+def comment(id):
+  comment = request.form['comment']
+  user_id = session['user_id']
+  query = 'INSERT INTO comments (comment, created_at, updated_at, user_id) VALUES(:comment, NOW(), NOW(), :user_id)'
+  data = {
+    'comment':comment,
+    'user_id':user_id
+  }
+  # sends info to database
+  mysql.query_db(query, data)
+  return redirect('/wall')
+
 @app.route('/wall')
 def wall():
   if 'user_id' in session:
-    return render_template('wall.html')
+    #query to pull info from db
+    query = 'SELECT messages.id, messages.message, users.first_name, users.last_name, messages.user_id, DATE_FORMAT(messages.created_At, "%M %D %T") AS time FROM messages JOIN users ON users.id = messages.user_id;'
+    messages = mysql.query_db(query)
+    return render_template('wall.html', messageToWall = messages)
   else:
     return redirect('/')
 
