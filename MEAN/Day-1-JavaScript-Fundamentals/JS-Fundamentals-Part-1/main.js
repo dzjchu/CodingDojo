@@ -38,8 +38,8 @@ sumLoop()
 //Write a loop that will go through the array [1, 5, 90, 25, -3, 0], find the minimum value, and then print it
 function minArr(){
     let arr = [1, 5, 90, 25, -3, 0];
-    var minVal;
-    for (var i = 0; i<arr.length; i++){
+    var minValue;
+    for (var i = 0; i<arr.length; i++) {
         if (arr[i] < arr[i-1]){
             minVal = arr[i];
         }
@@ -50,3 +50,13 @@ minArr()
 
 //Write a loop that will go through the array [1, 5, 90, 25, -3, 0], find the average of all of the values, and then print it
 
+function aveArr(){
+    let arr = [1, 5, 90, 25, -3, 0];
+    var sumValue = 0;
+    for (var i = 0; i<arr.length; i++) {
+        sumValue += arr[i];
+    }
+    var aveValue = sumValue/arr.length;
+    console.log (aveValue);
+}
+aveArr()
