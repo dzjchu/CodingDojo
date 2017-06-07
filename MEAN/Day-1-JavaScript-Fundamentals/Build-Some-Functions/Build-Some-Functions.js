@@ -18,23 +18,23 @@ console.log (stringReturnOne());
 console.log (stringReturnTwo());
 
 // 4
-caller = (param) => {
+function caller(param) {
     if (typeof(param)=='function'){ 
         param();
     }
 }
 
 // 5
-myDoubleConsoleLog = (param1,param2) => {
+function myDoubleConsoleLog (param1,param2) {
     if (typeof(param1) == 'function' && typeof(param2) == 'function'){ 
         console.log(param1(), param2());
     }
 }
 
 // 6
-caller2 = (param) => {
+function caller2(param) {
     console.log('starting');
-    var t = setTimeout(()=>{
+    setTimeout(()=>{
         if (typeof(param) == 'function'){
             param(stringReturnOne, stringReturnTwo)
         }
