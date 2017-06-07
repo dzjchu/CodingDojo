@@ -1,6 +1,5 @@
 var x = [3,5,"Dojo", "rocks", "Michael", "Sensei"]
 
-
 //Go through each value in the array x, where x = [3,5,"Dojo", "rocks", "Michael", "Sensei"]. Log each value
 
 function printX(){
