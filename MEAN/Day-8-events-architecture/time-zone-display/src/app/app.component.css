@@ -1,0 +1,24 @@
+div.container {
+  font-style: helvetica;
+  width: 800px;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+
+}
+
+div.buttons_container ul li {
+  display: inline;
+  margin-left: 10px;
+}
+
+div.btn {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 25px;
+}
+
+.selected {
+  background-color: yellow;
+}
