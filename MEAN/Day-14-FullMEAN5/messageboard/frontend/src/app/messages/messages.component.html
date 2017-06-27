@@ -1,0 +1,15 @@
+<p>
+  messages works!
+</p>
+
+<button md-raised-button color="primary">
+  primary color button
+</button>
+
+<div *ngFor="let message of messages">
+  <md-card style="margin:8px;">
+    <md-card-title> by {{message.owner}}</md-card-title>
+    <md-card-content>{{message.text}}</md-card-content>
+
+  </md-card>
+</div>
